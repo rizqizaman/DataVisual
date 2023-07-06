@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import base64
 
 # Fungsi untuk menghubungkan ke database
-def create_connection():
+
     # connection = mysql.connector.connect(
     connection = psycopg2.connect(
         host='containers-us-west-72.railway.app', #localhost',
@@ -15,9 +15,7 @@ def create_connection():
         password='5wL3CK4qVFFezhDOr5UQ',  # Ganti dengan password Anda
         database='railway'  # Ganti dengan nama database Anda
     )
-    return connection
 
-def get_data():
     conn = create_connection()
     # cursor = conn.cursor()
     # Menambahkan Kolom Hari pada database
@@ -33,10 +31,7 @@ def get_data():
     conn.close()
 
     # return col0, data
-    return df
-
-# Main function
-def main():
+    
     st.title("Visualisasi Data dari Database")
     tabel = get_data()
     column_list = list(tabel.columns)
@@ -56,6 +51,3 @@ def main():
     ax.set_title(f"Diagram Bar dari {selected_column}")
     st.pyplot(fig)
 
-
-if __name__ == '__main__':
-    main()
