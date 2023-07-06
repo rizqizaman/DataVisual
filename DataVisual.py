@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import base64
 
 # Fungsi untuk menghubungkan ke database
-
+def create_connection:
     # connection = mysql.connector.connect(
     connection = psycopg2.connect(
         host='containers-us-west-72.railway.app', #localhost',
