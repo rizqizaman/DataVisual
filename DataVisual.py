@@ -36,7 +36,6 @@ def get_data():
 def main():
     st.title("Visualisasi Data dari Database")
     tabel = get_data()
-
     column_list = list(tabel.columns)
     selected_column = st.selectbox("Pilih kolom:", column_list)
 
