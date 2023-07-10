@@ -57,12 +57,12 @@ def decode_image(encode_string):
     #     st.write(tanggal[0])
 
 st.title("Human History")
-# data = data()
-for item in data:
-    encoded_image = item['Image']
-    tanggal = item['Date_Time']
-    decoded_image = decode_image(encoded_image)
-    st.image(decoded_image, caption=tanggal, use_column_width=True)
+# # data = data()
+# for item in data:
+#     encoded_image = item['Image']
+#     tanggal = item['Date_Time']
+#     decoded_image = decode_image(encoded_image)
+#     st.image(decoded_image, caption=tanggal, use_column_width=True)
 
 
 
