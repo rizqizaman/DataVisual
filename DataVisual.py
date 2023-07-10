@@ -1,9 +1,9 @@
 import streamlit as st
 import mysql.connector
-import psycopg2
+# import psycopg2
 import pandas as pd
 import matplotlib.pyplot as plt
-import base64
+# import base64
 
 # Fungsi untuk menghubungkan ke database
 def create_connection():
