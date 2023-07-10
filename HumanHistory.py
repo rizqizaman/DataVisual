@@ -8,9 +8,9 @@ from PIL import Image
 # Fungsi untuk menghubungkan ke database
 
 # Membaca file JSON
-# def data():
-data = pd.read_json('fire.json')
-data
+# # def data():
+# data = pd.read_json('fire.json')
+# data
     # return data
     
 # def create_connection():
