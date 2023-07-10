@@ -47,7 +47,7 @@ def decode_image(encode_string):
     img = Image.open(BytesIO(decode_bytes))
     return img
     
-def main():
+# def main():
     # st.title("Human History")
     # encode_image = get_image_encode()
     # tanggal = Tanggal()
@@ -56,15 +56,15 @@ def main():
     #     st.image(decoded_image, use_column_width=True)
     #     st.write(tanggal[0])
 
-    st.title("Human History")
-    data = data()
-    for item in data:
-        encoded_image = item['Image']
-        tanggal = item['Date_Time']
-        decoded_image = decode_image(encoded_image)
-        st.image(decoded_image, caption=tanggal, use_column_width=True)
+st.title("Human History")
+data = data()
+for item in data:
+    encoded_image = item['Image']
+    tanggal = item['Date_Time']
+    decoded_image = decode_image(encoded_image)
+    st.image(decoded_image, caption=tanggal, use_column_width=True)
 
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
