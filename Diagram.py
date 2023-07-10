@@ -1,4 +1,4 @@
-import streamlit as st
+eteimport streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -18,8 +18,8 @@ value_counts = data["Object_Detection"].value_counts()
 fig, ax = plt.subplots()
 ax.bar(value_counts.index, value_counts.values)
 plt.xlabel("Object Detection") #column)
-plt.ylabel('Frekuensi')
-plt.title('Diagram Batang')
+plt.ylabel('Count')
+plt.title('Object Detection')
 
 # Menampilkan diagram batang menggunakan Streamlit
 st.pyplot(fig)
