@@ -57,7 +57,7 @@ def main():
     #     st.write(tanggal[0])
 
     st.title("Human History")
-    data = get_image_data()
+    data = data()
     for item in data:
         encoded_image = item['Image']
         tanggal = item['Date_Time']
