@@ -1,16 +1,23 @@
-import seaborn as sns
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import streamlit as st
 
-df = pd.read_json('fire.json')
+# Membaca file JSON
+data = pd.read_json('fire.json')
 
-st.title('Visualisasi Data')
+st.title('Diagram Batang dari File JSON')
 
-plt.figure(figsize=(15, 5))
-sns.countplot(data=df, x='Object_Detection', order=df['Object_Detection'].value_counts().index[:])
-plt.xlabel('Object Detectioni')
-plt.ylabel('Jumlah')
-plt.xticks(rotation=45)
+    # Memilih kolom untuk ditampilkan
+column = st.selectbox('Pilih Kolom', data.columns)
 
+    # Menghitung frekuensi nilai pada kolom yang dipilih
+value_counts = data[column].value_counts()
+
+    # Menampilkan diagram batang
+plt.bar(value_counts.index, value_counts.values)
+plt.xlabel(column)
+plt.ylabel('Frekuensi')
+plt.title('Diagram Batang')
+
+    # Menampilkan diagram batang menggunakan Streamlit
 st.pyplot()
