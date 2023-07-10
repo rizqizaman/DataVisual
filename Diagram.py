@@ -20,4 +20,4 @@ plt.ylabel('Frekuensi')
 plt.title('Diagram Batang')
 
     # Menampilkan diagram batang menggunakan Streamlit
-# st.pyplot()
+st.pyplot()
