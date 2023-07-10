@@ -8,9 +8,9 @@ from PIL import Image
 # Fungsi untuk menghubungkan ke database
 
 # Membaca file JSON
-def data():
-    data = pd.read_json('fire.json')
-    return data
+# def data():
+data = pd.read_json('fire.json')
+    # return data
     
 # def create_connection():
 #     connection = mysql.connector.connect(
@@ -57,7 +57,7 @@ def decode_image(encode_string):
     #     st.write(tanggal[0])
 
 st.title("Human History")
-data = data()
+# data = data()
 for item in data:
     encoded_image = item['Image']
     tanggal = item['Date_Time']
