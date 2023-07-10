@@ -2,5 +2,5 @@ streamlit
 mysql-connector
 pandas
 matplotlib
-Pillow==4.0.0
-pybase64==1.2.2
+Pillow
+pybase64
