@@ -5,7 +5,7 @@ from PIL import Image
 st.title('Live Stream menggunakan Streamlit')
 
     # Membuka kamera
-cap = cv2.VideoCapture("http://10.142.11.209:8080/video")
+cap = cv2.VideoCapture("http://192.168.71.137:8080/video")
 
     # Looping untuk menampilkan livestream
 while True:
