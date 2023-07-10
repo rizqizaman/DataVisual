@@ -5,18 +5,19 @@ import matplotlib.pyplot as plt
 # Membaca file JSON
 data = pd.read_json('fire.json')
 
-st.title('Diagram Batang dari File JSON')
+st.title('Visualisasi Data')
 
 # Memilih kolom untuk ditampilkan
-column = st.selectbox('Pilih Kolom', data.columns)
+# column = st.selectbox('Pilih Kolom', data.columns)
 
 # Menghitung frekuensi nilai pada kolom yang dipilih
-value_counts = data[column].value_counts()
+# value_counts = data[column].value_counts()
+value_counts = data["Object_Detection"].value_counts()
 
 # Membuat diagram batang
 fig, ax = plt.subplots()
 ax.bar(value_counts.index, value_counts.values)
-plt.xlabel(column)
+plt.xlabel("Object Detection") #column)
 plt.ylabel('Frekuensi')
 plt.title('Diagram Batang')
 
