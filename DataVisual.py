@@ -51,4 +51,4 @@ import base64
 #     ax.set_title(f"Diagram Bar dari {selected_column}")
 #     st.pyplot(fig)
     
-    st.title("Visualisasi Data dari Database")
+st.title("Visualisasi Data dari Database")
