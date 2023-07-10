@@ -1,9 +1,9 @@
-import streamlit as st
-import mysql.connector
-import base64
-import pandas as pd
-from io import BytesIO
-from PIL import Image
+# import streamlit as st
+# import mysql.connector
+# import base64
+# import pandas as pd
+# from io import BytesIO
+# from PIL import Image
 
 # Fungsi untuk menghubungkan ke database
 
