@@ -1,10 +1,17 @@
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit as st
 
-df = pd.read_json('aset/fire.json')
+df = pd.read_json('fire.json')
+
+st.title('Visualisasi Data')
+st.subheader('Jumlah Notifikasi Deteksi Api')
+
 plt.figure(figsize=(15, 5))
-# sns.countplot(data=df, x=['Api Besar', 'Api Kecil'], order=df['Notif_Deteksi'].value_counts().index[:])
 sns.countplot(data=df, x='Notif_Deteksi', order=df['Notif_Deteksi'].value_counts().index[:])
+plt.xlabel('Notif Deteksi')
+plt.ylabel('Jumlah')
+plt.xticks(rotation=45)
 
-    
+st.pyplot()
