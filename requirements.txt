@@ -2,7 +2,6 @@ streamlit
 mysql-connector
 pandas
 matplotlib
-PIL
 io
 base64
 psycopg2
