@@ -10,6 +10,7 @@ from PIL import Image
 # Membaca file JSON
 # def data():
 data = pd.read_json('fire.json')
+data
     # return data
     
 # def create_connection():
@@ -42,10 +43,10 @@ data = pd.read_json('fire.json')
 #     return TGL
 
 
-def decode_image(encode_string):
-    decode_bytes = base64.b64decode(encode_string)
-    img = Image.open(BytesIO(decode_bytes))
-    return img
+# def decode_image(encode_string):
+#     decode_bytes = base64.b64decode(encode_string)
+#     img = Image.open(BytesIO(decode_bytes))
+#     return img
     
 # def main():
     # st.title("Human History")
