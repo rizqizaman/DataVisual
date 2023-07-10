@@ -2,4 +2,6 @@ streamlit
 mysql-connector
 pandas
 matplotlib
-seaborn
+PIL
+io
+base64
