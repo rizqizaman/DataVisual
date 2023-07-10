@@ -5,3 +5,4 @@ matplotlib
 PIL
 io
 base64
+psycopg2
