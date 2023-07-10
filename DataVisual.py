@@ -7,8 +7,8 @@ import base64
 
 # Fungsi untuk menghubungkan ke database
 def create_connection():
-    # connection = mysql.connector.connect(
-    connection = psycopg2.connect(
+    connection = mysql.connector.connect(
+    # connection = psycopg2.connect(
         host='localhost',
         user='id20864486_bakaranpawon2023',  # Ganti dengan username Anda
         port='3306',
