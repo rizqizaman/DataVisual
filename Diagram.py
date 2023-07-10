@@ -1,23 +1,24 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 import matplotlib.pyplot as plt
 
-# Membaca file JSON
-data = pd.read_json('fire.json')
+# Membaca file CSV
+data = pd.read_csv('fire.csv')
 
-st.title('Diagram Batang dari File JSON')
+# Memilih kolom yang ingin ditampilkan
+kolom = st.selectbox('Pilih kolom', data.columns)
 
-    # Memilih kolom untuk ditampilkan
-column = st.selectbox('Pilih Kolom', data.columns)
+# Menghitung frekuensi nilai dalam kolom
+value_counts = data[kolom].value_counts()
 
-    # Menghitung frekuensi nilai pada kolom yang dipilih
-value_counts = data[column].value_counts()
+# Membuat diagram batang
+fig, ax = plt.subplots()
+ax.bar(value_counts.index, value_counts.values)
 
-    # Menampilkan diagram batang
-plt.bar(value_counts.index, value_counts.values)
-plt.xlabel(column)
-plt.ylabel('Frekuensi')
-plt.title('Diagram Batang')
+# Mengatur label dan judul
+ax.set_xlabel(kolom)
+ax.set_ylabel('Frekuensi')
+ax.set_title('Diagram Batang')
 
-    # Menampilkan diagram batang menggunakan Streamlit
-st.pyplot()
+# Menampilkan diagram batang di Streamlit
+st.pyplot(fig)
