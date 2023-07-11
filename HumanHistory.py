@@ -6,7 +6,7 @@ from PIL import Image
 
 data = pd.read_json('fire.json')
 encode_image_list = data['Image']
-tanggal = data['Date_Time']
+tanggal = data.sort_values(['Date_Time'], ascending=False)
 
 def decode_image(encode_string):
     decode_bytes = base64.b64decode(encode_string)
