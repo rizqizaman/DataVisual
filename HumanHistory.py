@@ -16,7 +16,7 @@ st.title("Decoded Images")
 # for encode_image in encode_image_list:
 #     decoded_image = decode_image(encode_image)
 #     st.image(decoded_image, use_column_width=True)
-for encoded_image, tanggal in zip(encode_image, tanggal):
+for encoded_image, tanggal in zip(encode_image_list, tanggal):
     decoded_image = decode_image(encoded_image)
     st.image(decoded_image, use_column_width=True)
     st.write(tanggal)
