@@ -2,5 +2,3 @@ streamlit
 mysql-connector
 pandas
 matplotlib
-Pillow
-pybase64
