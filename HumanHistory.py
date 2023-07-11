@@ -38,9 +38,9 @@ def decode_image(encode_string):
     return img
     
 st.title("Data Berdasarkan Tanggal Terupdate")
-# for index, row in data.iterrows():
-#     st.write("Tanggal:", row['Date_Time'])
-#     st.image(row['Image'])
+for index, row in data.iterrows():
+    st.write("Tanggal:", row['Date_Time'])
+    st.image(decode_image(row['Image']))
 
     
 # st.title("Decoded Images")
@@ -49,11 +49,11 @@ st.title("Data Berdasarkan Tanggal Terupdate")
 #     st.image(decoded_image, use_column_width=True)
 #     st.write(tanggal)
 
- for _, row in data.iterrows():
-    encoded_image = row['Image']
-    tanggal = row['Date_Time']
-    decoded_image = decode_image(encoded_image)
+ # for _, row in data.iterrows():
+ #    encoded_image = row['Image']
+ #    tanggal = row['Date_Time']
+ #    decoded_image = decode_image(encoded_image)
 
-        # Menampilkan gambar dan tanggal
-    st.image(decoded_image, caption=str(tanggal), use_column_width=True)
+ #        # Menampilkan gambar dan tanggal
+ #    st.image(decoded_image, caption=str(tanggal), use_column_width=True)
 
