@@ -1,16 +1,16 @@
-import streamlit as st
-import cv2
-from PIL import Image
+# import streamlit as st
+# import cv2
+# from PIL import Image
     
-st.title('Live Stream menggunakan Streamlit')
+# st.title('Live Stream menggunakan Streamlit')
 
-    # Membuka kamera
-cap = cv2.VideoCapture("http://192.168.71.137:8080/video")
+#     # Membuka kamera
+# cap = cv2.VideoCapture("http://192.168.71.137:8080/video")
 
-    # Looping untuk menampilkan livestream
-while True:
-  ret, frame = cap.read()
-  frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+#     # Looping untuk menampilkan livestream
+# while True:
+#   ret, frame = cap.read()
+#   frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        # Menampilkan livestream pada halaman web Streamlit
-  st.image(frame_rgb, channels='RGB')
+#         # Menampilkan livestream pada halaman web Streamlit
+#   st.image(frame_rgb, channels='RGB')
