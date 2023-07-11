@@ -1,15 +1,15 @@
 import streamlit as st
 # import mysql.connector
-import base64
-import pandas as pd
-from io import BytesIO
-from PIL import Image
+# import base64
+# import pandas as pd
+# from io import BytesIO
+# from PIL import Image
 
 # Fungsi untuk menghubungkan ke database
 
 # Membaca file JSON
 # # def data():
-data = pd.read_json('fire.json')
+# data = pd.read_json('fire.json')
 # data
     # return data
     
@@ -59,11 +59,11 @@ data = pd.read_json('fire.json')
 
 st.title("Human History")
 # data = data()
-for item in data:
-    encoded_image = item['Image']
-    tanggal = item['Date_Time']
-    decoded_image = decode_image(encoded_image)
-    st.image(decoded_image, caption=tanggal, use_column_width=True)
+# for item in data:
+    # encoded_image = item['Image']
+    # tanggal = item['Date_Time']
+    # decoded_image = decode_image(encoded_image)
+    # st.image(decoded_image, caption=tanggal, use_column_width=True)
 
 
 
