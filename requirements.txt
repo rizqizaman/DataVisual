@@ -3,5 +3,5 @@ pandas
 matplotlib
 Pillow
 pybase64
-mysql-connector-pytthon
+mysql-connector-python
 date-time-handler
