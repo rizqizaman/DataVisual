@@ -49,7 +49,7 @@ st.title("Data Berdasarkan Tanggal Terupdate")
 #     st.image(decoded_image, use_column_width=True)
 #     st.write(tanggal)
 
- for _, row in data_sorted.iterrows():
+ for _, row in data.iterrows():
     encoded_image = row['Image']
     tanggal = row['Date_Time']
     decoded_image = decode_image(encoded_image)
