@@ -23,15 +23,15 @@ def create_connection():
     )
     return connection
 
-def get_image_encode():
-    conn = create_connection()
-    query = "SELECT Image From fire ORDER BY Object_Detection = 'Person' DESC "
-    cursor = conn.cursor()
-    cursor.execute(query)
-    image_list = cursor.fetchall()
+# def get_image_encode():
+#     conn = create_connection()
+#     query = "SELECT Image From fire ORDER BY Object_Detection = 'Person' DESC "
+#     cursor = conn.cursor()
+#     cursor.execute(query)
+#     image_list = cursor.fetchall()
 
-    conn.close()
-    return image_list
+#     conn.close()
+#     return image_list
 
 def Tanggal():
     conn = create_connection()
@@ -44,10 +44,10 @@ def Tanggal():
     return TGL
 
 
-def decode_image(encode_string):
-    decode_bytes = base64.b64decode(encode_string)
-    img = Image.open(BytesIO(decode_bytes))
-    return img
+# def decode_image(encode_string):
+#     decode_bytes = base64.b64decode(encode_string)
+#     img = Image.open(BytesIO(decode_bytes))
+#     return img
     
 # def main():
 #     st.title("Human History")
@@ -59,14 +59,11 @@ def decode_image(encode_string):
 #         st.write(tanggal[0])
 
 st.title("Human History")
-data = data()
-for encoded_image, tanggal in zip(encode_image, tanggal):
-    decoded_image = decode_image(encoded_image[0])
-    st.image(decoded_image, use_column_width=True)
-    st.write(tanggal[0])
+# data = data()
+# for encoded_image, tanggal in zip(encode_image, tanggal):
+#     decoded_image = decode_image(encoded_image[0])
+#     st.image(decoded_image, use_column_width=True)
+#     st.write(tanggal[0])
     # st.image(decoded_image, caption=tanggal, use_column_width=True)
-
-
-
-# if __name__ == '__main__':
-#     main()
+tgl = tanggal()
+tgl
