@@ -65,5 +65,5 @@ st.title("Human History")
 #     st.image(decoded_image, use_column_width=True)
 #     st.write(tanggal[0])
     # st.image(decoded_image, caption=tanggal, use_column_width=True)
-tgl = tanggal()
+tgl = Tanggal()
 tgl
